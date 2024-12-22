@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 const FooterContainer = styled.footer`
   background-color: rgba(31, 115, 44, 0.68); 
-  padding: 0rem;
+  padding: 1rem;
   text-align: center;
   color: white;
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
 `;

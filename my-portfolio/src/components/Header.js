@@ -32,7 +32,7 @@ const NavItem = styled.div`
   cursor: pointer;
 
   &:hover {
-    color: #d4af37; /* Optional: change color to indicate clickable */
+    color:rgba(212, 175, 55, 0.52); /* Optional: change color to indicate clickable */
   }
 
   /* Show dropdown on hover */
