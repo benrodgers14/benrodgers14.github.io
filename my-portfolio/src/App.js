@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import styled from 'styled-components'; // Import styled from styled-components
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -9,20 +10,34 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Experience from './components/Experience';
 
+const AppContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
+
+const Content = styled.main`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+`;
+
 function App() {
     return (
         <Router>
-            <div className="App">
+            <AppContainer>
                 <Header />
-                <Routes>
-                    <Route path="/" element={<Main />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/projects" element={<Projects />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/experience" element={<Experience />} />
-                </Routes>
+                <Content>
+                    <Routes>
+                        <Route path="/" element={<Main />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/projects" element={<Projects />} />
+                        <Route path="/contact" element={<Contact />} />
+                        <Route path="/experience" element={<Experience />} />
+                    </Routes>
+                </Content>
                 <Footer />
-            </div>
+            </AppContainer>
         </Router>
     );
 }

@@ -79,15 +79,30 @@ const AboutItem = ({ question, answer }) => {
 const About = () => {
   const AboutData = [
     {
-      question: "Who am I?",
-      answer: "Benjamin Rodgers.",
+      question: "Education",
+      answer: `I have a strong educational background. I graduated from Springside Chestnut Hill Academy in 2022, and now attend Rensselaer
+       Polytechnic Institute as a Computer Science Major. I have recently acquired my minor in Economics with the hopes of Double Majoring. My
+       intended graduation date is 2026.`,
     },
+    {
+      question: "Interests",
+      answer: `When not occupied by school or work, I have many hobbies and interests. I taught myself how to play guitar
+      as a middle-schooler and play frequently - most often something by Bob Dylan. I am an avid adventurer and love to travel. See the travels tab for more on that.
+      Sports, philosophy, and exercising would also be passions of mine.`,
+    },
+
+    {
+      question: "Extracurriculars",
+      answer: `I was a heavy participant in extracurriculars in high school, but now in college, my time is more valuable. My only current
+      club/organization I am a current participant in is the Delta Kappa Espilon Psi Omega fraternity in which I am an active brother and current President.`,
+    },
+
   ];
 
   return (
     <AboutContainer>
       <AboutContent>
-        <h1 style={{ marginTop: '50px', marginLeft: '30px' }}>Quick Information On Me</h1>
+        <h1 style={{ marginTop: '50px', marginLeft: '30px' }}>Quick Information About Me</h1>
         <AboutSection style={{ marginLeft: '30px' }}>
           {AboutData.map((about, index) => (
             <AboutItem key={index} question={about.question} answer={about.answer} />
