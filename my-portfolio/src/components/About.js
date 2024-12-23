@@ -81,21 +81,32 @@ const About = () => {
     {
       question: "Education",
       answer: `I have a strong educational background. I graduated from Springside Chestnut Hill Academy in 2022, and now attend Rensselaer
-       Polytechnic Institute as a Computer Science Major. I have recently acquired my minor in Economics with the hopes of Double Majoring. My
-       intended graduation date is 2026.`,
+       Polytechnic Institute as a Computer Science Major. I have recently acquired a minor in Economics with the hopes of Double Majoring. My
+       intended graduation date is Spring 2026.`,
     },
     {
       question: "Interests",
       answer: `When not occupied by school or work, I have many hobbies and interests. I taught myself how to play guitar
-      as a middle-schooler and play frequently - most often something by Bob Dylan. I am an avid adventurer and love to travel. See the travels tab for more on that.
-      Sports, philosophy, and exercising would also be passions of mine.`,
+      as a middle-schooler and play frequently - most often something by Bob Dylan. I am an avid adventurer and love to travel. See the travels tab for more information.
+      Sports, philosophy, and exercising are also passions of mine.`,
     },
 
     {
       question: "Extracurriculars",
-      answer: `I was a heavy participant in extracurriculars in high school, but now in college, my time is more valuable. My only current
-      club/organization I am a current participant in is the Delta Kappa Espilon Psi Omega fraternity in which I am an active brother and current President.`,
+      answer: `I was a heavy participant in extracurriculars in high school, but now in college, my time is more valuable. The only
+      club/organization I am a current participant in is the Delta Kappa Epsilon Psi Omega fraternity in which I am an active brother and current President.`,
     },
+
+    {
+      question: "Travels",
+      answer: `As mentioned in the "interests" tab, I enjoy camping, hiking, and going places. There is no better feeling
+      than being somewhere you've never been before. I have been lucky enough to experience many of these trips with some of my closest friends.
+      In the Summer of 2023, my friend and I camped across the country, hitting an estimated 20 states and 7 National Parks in one month. This past summer we did the
+      same kind of trip, the only difference being this trip was focused on the Southeastern United States. Aside from camping, I recently took
+      a trip to Prague. Hopefully, I can go back to Europe soon. Many more travels to come!`,
+    },
+
+    
 
   ];
 
