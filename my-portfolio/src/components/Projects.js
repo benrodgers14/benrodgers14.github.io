@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; 
 import styled from 'styled-components';
 import Joe from '../Images/Joe.jpg'; // Replace with your actual project image paths
 import DKE from '../Images/Psi-Omega-Crest.jpg'; // Replace with your actual project image paths
@@ -93,25 +94,25 @@ const Projects = () => (
       <p>Here are some of the projects I've worked on. Click on each image to learn more about the project.</p>
     </Header>
     <ProjectsGrid>
-      <ProjectCard href="/Tic-Tac-Toe">
+      <ProjectCard as={Link} to="/Tic-Tac-Toe">
         <ImageContainer>
           <Image1 src={Joe} alt="Project 1" />
         </ImageContainer>
         <Label>Tic-Tac-Toe Machine Learning</Label>
       </ProjectCard>
-      <ProjectCard href="/DKE-Website">
+      <ProjectCard as={Link} to="/DKE-Website">
         <ImageContainer>
           <Image2 src={DKE} alt="Project 2" />
         </ImageContainer>
         <Label>Delta Kappa Epsilon Website</Label>
       </ProjectCard>
-      <ProjectCard href="/WTGW">
+      <ProjectCard as={Link} to="/WTGW">
         <ImageContainer>
           <Image3 src={WTGW} alt="Project 3" />
         </ImageContainer>
         <Label>When To Go Where - A National Parks Ontology</Label>
       </ProjectCard>
-      <ProjectCard href="/BJR">
+      <ProjectCard as={Link} to="/BJR">
         <ImageContainer>
           <Image3 src="/BJRLogo.png" alt="Logo" />
         </ImageContainer>
