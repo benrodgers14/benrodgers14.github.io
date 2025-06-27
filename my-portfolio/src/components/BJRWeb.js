@@ -65,7 +65,7 @@ const BJRWeb = () => (
         <Image src={"/BJRLogo.png"} alt="Arch" />
       </ImageContainer>
       <TextContainer>
-        <h2>When To Go Where - A National Parks Ontology</h2>
+        <h2>Website of Benjamin Rodgers</h2>
         <p>
            Welcome! This project is what you are currently viewing. It is a React application that serves as
  a portfolio for me. This is meant to showcase my projects, interests, and skills. Thanks for visiting!

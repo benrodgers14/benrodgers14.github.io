@@ -1,9 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-
-
-const HeaderContainer = styled.header`
+/*const HeaderContainer = styled.header`
   background-color: rgba(31, 115, 44, 0.68); 
   padding: 0px 20px;
   display: flex;
@@ -72,7 +70,47 @@ const NavItem = styled.div`
     margin: 5px 0;
     left: 0;
     font-size: 1em;
+  } */
+
+const HeaderContainer = styled.header`
+  background-color:rgba(31, 115, 44, 0.68); 
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+`;
+
+
+const LogoContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const Nav = styled.nav`
+  display: flex;
+  align-items: center;
+`;
+
+const NavItem = styled.div`
+  position: relative;
+  margin: 0 15px;
+  left: 10px;
+  color: white;
+  font-size: 1.8em;
+  cursor: pointer;
+
+  &:hover {
+    color:rgba(212, 175, 55, 0.52); 
   }
+
+  /* Show dropdown on hover */
+  &:hover > ul {
+    display: block;
+  }
+
+  display: flex;
+  align-items: center; /* Center text and caret vertically */
 `;
 
 const NavLinkStyled = styled(Link)`
