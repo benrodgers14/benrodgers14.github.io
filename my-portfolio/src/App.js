@@ -10,6 +10,10 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Experience from './components/Experience';
 import TicTacToe from './components/Tic-Tac-Toe';
+import DKEWebsite from './components/DKE-Website';
+import WTGW from './components/WTGW'; 
+import BJRWeb from './components/BJRWeb';
+
 
 const AppContainer = styled.div`
   display: flex;
@@ -36,6 +40,10 @@ function App() {
                         <Route path="/contact" element={<Contact />} />
                         <Route path="/experience" element={<Experience />} />
                         <Route path="/Tic-Tac-Toe" element={<TicTacToe />} />
+                        <Route path="/DKE-Website" element={<DKEWebsite />} />
+                        <Route path="/WTGW" element={<WTGW />} />
+                        <Route path="/BJR" element={<BJRWeb />} />
+
                     </Routes>
                 </Content>
                 <Footer />

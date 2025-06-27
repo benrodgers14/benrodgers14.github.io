@@ -94,7 +94,7 @@ const Experience = () => {
                           service hours. As President, I oversee all chapter operations and work multiple hours each day to make sure 
                           everything runs smoothly.</p>
           <p>&nbsp;</p>
-          <p><span style={{ fontWeight: 'bold' }}>Roles had, but not mentioned:</span> Academic Chair, Sergeant at Arms, New Member Educator</p>
+          <p><span style={{ fontWeight: 'bold' }}>Roles had, but not described:</span> Academic Chair, Sergeant at Arms, New Member Educator</p>
         </TextContainer>
       </ExperienceSection2>
     </ExperienceContainer>

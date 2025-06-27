@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import TicTacToeImage from '../Images/Joe.jpg'; 
-import TicTacToeReport from '../documents/Tic-Tac-Joe-WriteUp.pdf'; 
+
+
 
 const Container = styled.div`
   display: flex;
@@ -48,6 +48,7 @@ const Image = styled.img`
   max-width: 400px;
   height: auto;
   border-radius: 8px;
+  padding: 20px;
 `;
 
 const TextContainer = styled.div`
@@ -56,38 +57,23 @@ const TextContainer = styled.div`
   padding-left: 20px;
 `;
 
-const TicTacToe = () => (
+const BJRWeb = () => (
   <Container>
     <BackButton to="/projects">Back to Projects</BackButton>
     <Content>
       <ImageContainer>
-        <Image src={TicTacToeImage} alt="Tic Tac Toe" />
+        <Image src={"/BJRLogo.png"} alt="Arch" />
       </ImageContainer>
       <TextContainer>
-        <h2>Tic Tac Toe Machine Learning</h2>
+        <h2>When To Go Where - A National Parks Ontology</h2>
         <p>
-         A project worked on and executed by Theodore Tasman of Penn State University and I.
-          
-        </p>
-        <p>
-          Taking inspiration from the 1983 classic, WarGames, we decided to see if we could replicate the Tic-Tac-Toe learning machine using our knowledge and research. This project required hours of research and lots of trial and error, as we had not worked on or learned machine learning before.
-
-          While Tic-Tac-Toe represents a straightforward application due to its solved nature, our primary objective was to implement a deep-learning model as a learning exercise and a proof of concept for future, more intricate challenges.
-
+           Welcome! This project is what you are currently viewing. It is a React application that serves as
+ a portfolio for me. This is meant to showcase my projects, interests, and skills. Thanks for visiting!
+ To view the open-source code for this project, please follow the link below.       
         </p>
 
         <p>
-          This project was a great learning experience. To view the project in further detail, please visit the GitHub repository linked below along with the attached PDF Report.
-        
-
-        </p>
-
-        <a href={TicTacToeReport} target="_blank" rel="noopener noreferrer">
-          Tic-Tac-Toe PDF Report
-        </a>
-
-        <p>
-        <a href="https://github.com/tedtasman/tic-tac-joe" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/benrodgers14/benrodgers14.github.io" target="_blank" rel="noopener noreferrer">
             GitHub Repository
         </a>
         </p>
@@ -102,4 +88,4 @@ const TicTacToe = () => (
   </Container>
 );
 
-export default TicTacToe;
+export default BJRWeb;

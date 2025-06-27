@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import TicTacToeImage from '../Images/Joe.jpg'; 
-import TicTacToeReport from '../documents/Tic-Tac-Joe-WriteUp.pdf'; 
+import PsiOmega from '../Images/Psi-Omega-Crest.jpg'; 
+
 
 const Container = styled.div`
   display: flex;
@@ -56,38 +56,39 @@ const TextContainer = styled.div`
   padding-left: 20px;
 `;
 
-const TicTacToe = () => (
+const DKEWebsite = () => (
   <Container>
     <BackButton to="/projects">Back to Projects</BackButton>
     <Content>
       <ImageContainer>
-        <Image src={TicTacToeImage} alt="Tic Tac Toe" />
+        <Image src={PsiOmega} alt="Crest" />
       </ImageContainer>
       <TextContainer>
-        <h2>Tic Tac Toe Machine Learning</h2>
+        <h2>Delta Kappa Epsilon Psi Omega Fraternity Website</h2>
         <p>
-         A project worked on and executed by Theodore Tasman of Penn State University and I.
+         A project completed by a small group of my Fraternity and I.
           
         </p>
         <p>
-          Taking inspiration from the 1983 classic, WarGames, we decided to see if we could replicate the Tic-Tac-Toe learning machine using our knowledge and research. This project required hours of research and lots of trial and error, as we had not worked on or learned machine learning before.
-
-          While Tic-Tac-Toe represents a straightforward application due to its solved nature, our primary objective was to implement a deep-learning model as a learning exercise and a proof of concept for future, more intricate challenges.
-
+          To keep up with the modern times of social media marketing, we found it necassary to create a website
+          for all of campus to view. We knew that a high quality website would be a great way to get our name out
+          to the student body.
         </p>
 
         <p>
-          This project was a great learning experience. To view the project in further detail, please visit the GitHub repository linked below along with the attached PDF Report.
-        
-
-        </p>
-
-        <a href={TicTacToeReport} target="_blank" rel="noopener noreferrer">
-          Tic-Tac-Toe PDF Report
-        </a>
+          This project was done over our Fall 2024 Semester. My focus in this project was to play a large part in designing the 
+ back-end systems for the website, as well as help design the front-end if needed. During this time, I learned 
+ more about how AWS works, as the website is hosted on an EC2 instance. Furthermore, I helped resolve issues
+           when the website would crash or break. Our back-end also contains a database that can store calendar details and 
+          has an admin page that allows dynamic updates to the mentioned calendar.
+     </p>
 
         <p>
-        <a href="https://github.com/tedtasman/tic-tac-joe" target="_blank" rel="noopener noreferrer">
+          If you want to view the open source code for this project, please visit the GitHub repository linked below. Otherwise feel free to visit the 
+          actual website at <a href="https://dekesrpi.org/" target="_blank" rel="noopener noreferrer">dkesrpi.org</a>.
+        </p>
+        <p>
+        <a href="https://github.com/NBelgaonkar/Psi-Omega-Site" target="_blank" rel="noopener noreferrer">
             GitHub Repository
         </a>
         </p>
@@ -102,4 +103,4 @@ const TicTacToe = () => (
   </Container>
 );
 
-export default TicTacToe;
+export default DKEWebsite;
