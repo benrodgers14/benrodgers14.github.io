@@ -34,7 +34,7 @@ const Main = () => (
         <p>You have reached the website dedicated to the personal portfolio of Benjamin Rodgers.</p>
       </section>
         <section id="Dev">
-        <p>This website is a constantly being developed and changing as I do. Feel free to suggest edits or ideas for future updates!</p>
+        <p>This website is a constantly being developed and will continue to change as I do. Feel free to suggest edits or ideas for future updates!</p>
       </section>
     </ContentContainer>
   </MainContainer>

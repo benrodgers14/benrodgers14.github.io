@@ -17,8 +17,8 @@ const HeaderContainer = styled.header`
     rgba(212, 175, 55, 0.18) 100%
   );
   @media (max-width: 600px) {
-    flex-direction: column;
-    align-items: flex-start;
+    
+    align-items: center;
     padding: 8px;
   }
 `;
@@ -66,22 +66,23 @@ const Nav = styled.nav`
 
   @media (max-width: 600px) {
     flex-direction: column;
-    width: 70vw;
+    width:100vw;
     max-width: 300px;
     align-items: flex-start;
     margin-top: 0;
     display: flex;
     background: rgb(212, 175, 55);
     position: absolute;
-    top: 138px;
+    top: 100%;
     right: 0; 
-    left: auto;
+    left: 0;
     height: auto; 
     padding: 20px 20px 20px 20px;
     box-shadow: -2px 0 8px rgba(0,0,0,0.15); 
     transform: translateX(${props => (props.open ? '0' : '100%')});
     transition: transform 0.3s ease;
     z-index: 1200;
+    display: ${props => (props.open ? 'flex' : 'none')};
   }
 `;
 

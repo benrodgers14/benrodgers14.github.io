@@ -31,7 +31,8 @@ const Content = styled.main`
 
 const GlobalStyle = createGlobalStyle`
   body {
-    font-family: 'Georgia', Arial, Helvetica, sans-serif; // Change to your preferred font
+    overflow-x: hidden;
+    font-family: 'Georgia', Arial, Helvetica, sans-serif; 
   }
 `;
 

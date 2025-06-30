@@ -14,6 +14,13 @@ const FooterContainer = styled.footer`
     rgba(31, 115, 44, 0.7) 18%
    
   ); 
+    @media (max-width: 600px) {
+    padding: 0.7rem 0.2rem;
+    font-size: 0.95em;
+  }
+
+
+
   `;
 
 const Footer = () => {

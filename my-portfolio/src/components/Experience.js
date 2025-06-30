@@ -28,7 +28,15 @@ const ExperienceSection = styled.div`
   padding-top: 20px;
   padding-bottom: 20px;
   border-top: 2px solid #e0e0e0; 
-  border-bottom: 2px solid #e0e0e0; /* Add top border */
+  border-bottom: 2px solid #e0e0e0;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+
 `;
 
 const ExperienceSection2 = styled.div`
@@ -39,6 +47,11 @@ const ExperienceSection2 = styled.div`
   max-width: 100%;
   padding-bottom: 20px;
   
+  @media (max-width: 800px) {
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  }
   
   `;
 
@@ -48,11 +61,30 @@ const LogoContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding-left: 30px;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @media (max-width: 800px) {
+    padding-left: 0;
+    img {
+      max-width: 70vw;
+    }
+  }
 `;
 
 const TextContainer = styled.div`
   flex: 2;
   padding-left: 50px;
+
+  @media (max-width: 800px) {
+    padding-left: 0;
+    text-align: center;
+    width: 100%;
+  }
 `;
 
 const Experience = () => {
