@@ -45,6 +45,8 @@ const LogoContainer = styled.div`
     @media (max-width: 600px) {
       font-size: 1.3em;
       margin: 0 5px;
+      
+      
     }
   }
 `;
@@ -75,7 +77,7 @@ const Nav = styled.nav`
     position: absolute;
     top: 100%;
     right: 0; 
-    left: 0;
+   
     height: auto; 
     padding: 20px 20px 20px 20px;
     box-shadow: -2px 0 8px rgba(0,0,0,0.15); 
