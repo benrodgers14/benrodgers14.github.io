@@ -1,7 +1,8 @@
 import React from 'react';
 // import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
-import styled from 'styled-components'; // Import styled from styled-components
+import styled from 'styled-components'; 
+import { createGlobalStyle } from 'styled-components';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -14,7 +15,7 @@ import TicTacToe from './components/Tic-Tac-Toe';
 import DKEWebsite from './components/DKE-Website';
 import WTGW from './components/WTGW'; 
 import BJRWeb from './components/BJRWeb';
-
+import FitCheck from './components/FitCheck'; 
 
 const AppContainer = styled.div`
   display: flex;
@@ -28,28 +29,41 @@ const Content = styled.main`
   flex-direction: column;
 `;
 
+const GlobalStyle = createGlobalStyle`
+  body {
+    font-family: 'Georgia', Arial, Helvetica, sans-serif; // Change to your preferred font
+  }
+`;
+
+
+
 function App() {
     return (
-        <Router>
-            <AppContainer>
-                <Header />
-                <Content>
-                    <Routes>
-                        <Route path="/" element={<Main />} />
-                        <Route path="/about" element={<About />} />
-                        <Route path="/projects" element={<Projects />} />
-                        <Route path="/contact" element={<Contact />} />
-                        <Route path="/experience" element={<Experience />} />
-                        <Route path="/Tic-Tac-Toe" element={<TicTacToe />} />
-                        <Route path="/DKE-Website" element={<DKEWebsite />} />
-                        <Route path="/WTGW" element={<WTGW />} />
-                        <Route path="/BJR" element={<BJRWeb />} />
+        <>
+        <GlobalStyle />
+            <Router>
+                <AppContainer>
+                    <Header />
+                    <Content>
+                        <Routes>
+                            <Route path="/" element={<Main />} />
+                            <Route path="/about" element={<About />} />
+                            <Route path="/projects" element={<Projects />} />
+                            <Route path="/contact" element={<Contact />} />
+                            <Route path="/experience" element={<Experience />} />
+                            <Route path="/Tic-Tac-Toe" element={<TicTacToe />} />
+                            <Route path="/DKE-Website" element={<DKEWebsite />} />
+                            <Route path="/WTGW" element={<WTGW />} />
+                            <Route path="/BJR" element={<BJRWeb />} />
+                            <Route path="/FitCheck" element={<FitCheck />} />
 
-                    </Routes>
-                </Content>
-                <Footer />
-            </AppContainer>
-        </Router>
+                        </Routes>
+                    </Content>
+                    <Footer />
+                </AppContainer>
+            </Router>
+        <GlobalStyle />
+        </>
     );
 }
 

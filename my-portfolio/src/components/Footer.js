@@ -9,7 +9,12 @@ const FooterContainer = styled.footer`
   position: relative;
   bottom: 0;
   width: 100%;
-`;
+  background: linear-gradient(
+   rgba(212, 175, 55, 0.18) 5%,
+    rgba(31, 115, 44, 0.7) 18%
+   
+  ); 
+  `;
 
 const Footer = () => {
   return (

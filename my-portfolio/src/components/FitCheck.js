@@ -1,0 +1,89 @@
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import FitCheckLogo from '../Images/FitCheckLogo.jpg'; 
+
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the top */
+  padding: 20px;
+  background-color: #ffffff;
+  min-height: 100vh;
+`;
+
+const BackButton = styled(Link)`
+  align-self: flex-start;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color:rgb(255, 255, 255);
+  color: black;
+  text-decoration: none;
+  border: 2px solid black;
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color:rgb(198, 198, 198);
+  }
+`;
+
+const Content = styled.div`
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  width: 100%;
+`;
+
+const ImageContainer = styled.div`
+  border-top: 2px solid #e0e0e0; 
+  flex: 1;
+  display: flex;
+  justify-content: flex-start; /* Align image to the left */
+  align-items: flex-start; /* Align image to the top */
+`;
+
+const Image = styled.img`
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  padding: 20px;
+`;
+
+const TextContainer = styled.div`
+  border-top: 2px solid #e0e0e0; 
+  flex: 2;
+  padding-left: 20px;
+`;
+
+const FitCheck = () => (
+  <Container>
+    <BackButton to="/projects">Back to Projects</BackButton>
+    <Content>
+      <ImageContainer>
+        <Image src={FitCheckLogo} alt="Arch" />
+      </ImageContainer>
+      <TextContainer>
+        <h2>FitCheck</h2>
+        <p>
+          This was a project worked on during the Spring of 2025 by a team of four students from my Institute. This project was designed to be
+          an application that would allow users to generate outfits based on their style preferences. In essence, it is an online closet that
+          provides outfit suggestions. Key features included an outfit generator, a closet management system, and user management features. This project
+          took a lot of time and effort to complete, but it was a great learning experience.       
+        </p>
+
+        <p>
+        </p>
+
+
+
+      </TextContainer>
+
+
+
+    </Content>
+  </Container>
+);
+
+export default FitCheck;

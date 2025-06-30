@@ -1,23 +1,34 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Memphis from '../Images/Memphis.jpg'; 
+import Wilderness from '../Images/Wilderness.JPG';
 
 // FAQ Page main container styling
 const AboutContainer = styled.div`
   display: flex;
-  flex-direction: row; /* Change to row to position items horizontally */
-  align-items: flex-start; /* Align items to the top */
-  justify-content: space-between; /* Space out items to push the image to the right */
+  flex-direction: row; 
+  align-items: flex-start; 
+  justify-content: space-between; 
   color: #333;
   min-height: 100vh;
   padding: 10px;
   background-color: #ffffff;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+  }
 `;
 
 const AboutContent = styled.div`
   width: 100%;
-  max-width: 700px; /* Adjust width to make it smaller */
-  text-align: center; /* Center the header text */
+  max-width: 800px; 
+  text-align: center; 
+
+  @media (max-width: 600px) {
+    max-width: 95vw;
+    margin: 0 auto;
+  }
 `;
 
 const AboutSection = styled.section`
@@ -26,9 +37,16 @@ const AboutSection = styled.section`
   border-radius: 8px;
   background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  @media (max-width: 600px) {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin: 20px auto 0 auto;
+    width: 95vw;
+  }
+
 `;
 
-// Styled components for the dropdown
+
 const Question = styled.h3`
   margin: 0;
   padding: 15px 20px;
@@ -49,14 +67,35 @@ const Answer = styled.p`
   font-size: 1rem;
   background-color: #ffffff;
   border-bottom: 1px solid #e0e0e0;
-  display: ${({ isOpen }) => (isOpen ? 'block' : 'none')}; /* Toggle display based on isOpen prop */
+  display: ${({ isOpen }) => (isOpen ? 'block' : 'none')}; 
+  
 `;
 
 const ImageContainer = styled.div`
   flex: 1;
   display: flex;
-  justify-content: flex-end; /* Align image to the right */
-  align-items: flex-start; /* Align image to the top */
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin-top: 50px; 
+    margin-left: 0;
+    margin-right: 0;
+    @media (max-width: 800px) {
+      max-width: 90vw;
+      margin: 20px auto 0 auto;
+      display: block;
+    }
+  }
+
+  @media (max-width: 800px) {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
 `;
 
 // AboutItem component
@@ -99,11 +138,11 @@ const About = () => {
 
     {
       question: "Travels",
-      answer: `As mentioned in the "interests" tab, I enjoy camping, hiking, and going places. There is no better feeling
+      answer: `As mentioned in the "Interests" tab, I enjoy camping, hiking, and exploring new places. There is no better feeling
       than being somewhere you've never been before. I have been lucky enough to experience many of these trips with some of my closest friends.
-      In the Summer of 2023, my friend and I camped across the country, hitting an estimated 20 states and 7 National Parks in one month. This past summer we did the
-      same kind of trip, the only difference being this trip was focused on the Southeastern United States. Aside from camping, I recently took
-      a trip to Prague. Hopefully, I can go back to Europe soon. Many more travels to come!`,
+      In the Summer of 2023, my friend and I camped across the country, hitting an estimated 20 states and 7 National Parks in one month. In the Summer of 2024 we did the
+      same kind of trip, the only difference being this trip was focused on the Southeastern United States. Backpacking is also something 
+      I have been working on. My most recent trip entailed journerying through the mountains of the Washakie Wilderness of the Shoshone National Forest. Many more travels to come!`,
     },
 
     
@@ -113,15 +152,15 @@ const About = () => {
   return (
     <AboutContainer>
       <AboutContent>
-        <h1 style={{ marginTop: '50px', marginLeft: '30px' }}>Quick Information About Me</h1>
-        <AboutSection style={{ marginLeft: '30px' }}>
-          {AboutData.map((about, index) => (
-            <AboutItem key={index} question={about.question} answer={about.answer} />
-          ))}
-        </AboutSection>
+      <h1 style={{ marginTop: '50px' }}>Quick Information About Me</h1>
+      <AboutSection>
+        {AboutData.map((about, index) => (
+          <AboutItem key={index} question={about.question} answer={about.answer} />
+        ))}
+      </AboutSection>
       </AboutContent>
       <ImageContainer>
-        <img src={Memphis} alt="Description" style={{marginRight: '30px', marginTop: '60px' , width: '70%', maxWidth: '600px', height: 'auto' }} />
+        <img src={Wilderness} alt="Description" />
       </ImageContainer>
     </AboutContainer>
   );

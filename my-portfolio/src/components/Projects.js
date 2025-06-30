@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
 import styled from 'styled-components';
-import Joe from '../Images/Joe.jpg'; // Replace with your actual project image paths
-import DKE from '../Images/Psi-Omega-Crest.jpg'; // Replace with your actual project image paths
-import WTGW from '../Images/ArchWTGW.jpg'; // Replace with your actual project image paths
+import Joe from '../Images/Joe.jpg'; 
+import DKE from '../Images/Psi-Omega-Crest.jpg'; 
+import WTGW from '../Images/ArchWTGW.jpg'; 
+import FitCheck from '../Images/FitCheckLogo.jpg';
+
 
 const ProjectsContainer = styled.main`
   display: flex;
@@ -56,9 +58,9 @@ const Image1 = styled.img`
   left: 0;
   width: 95%;
   height: 95%;
-  object-fit: cover; /* Crop the image */
-  object-position: 50% 30px; /* Move the image lower */
-  transform: scale(1.35); /* Zoom in the image */
+  object-fit: cover;
+  object-position: 50% 30px; 
+  transform: scale(1.35); 
 
 `;
 
@@ -68,8 +70,8 @@ const Image2 = styled.img`
   left: 0;
   width: 100%;
   height: 100%;
-  object-position: 50% 50%; /* Center the image */
-  transform: scale(1); /* Adjust the scale as needed */
+  object-position: 50% 50%; 
+  transform: scale(1); 
 `;
 
 const Image3 = styled.img`
@@ -78,7 +80,7 @@ const Image3 = styled.img`
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Crop the image */
+  object-fit: cover; 
   object-position: 50% 50%;
 `;
 
@@ -117,6 +119,12 @@ const Projects = () => (
           <Image3 src="/BJRLogo.png" alt="Logo" />
         </ImageContainer>
         <Label>Website of BJR - A Personal Website</Label>
+      </ProjectCard>
+            <ProjectCard as={Link} to="/FitCheck">
+        <ImageContainer>
+          <Image3 src={FitCheck} alt="Logo" />
+        </ImageContainer>
+        <Label>FitCheck - Online Closet and Outfit Recomender</Label>
       </ProjectCard>
     </ProjectsGrid>
   </ProjectsContainer>

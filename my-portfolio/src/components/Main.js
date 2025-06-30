@@ -25,16 +25,16 @@ const ContentContainer = styled.div`
 const Main = () => (
   <MainContainer>
     <ContentContainer>
-      <section id="Dev">
-        <h2 style={{ color: 'red', marginBottom: '0px', marginTop: '0px' }}>Development Notice</h2>
-        <p>This website is currently under development. Check periodically for updates.</p>
-      </section>
+
       <ImageContainer>
         <img src={LighthouseSmile} alt="Description" style={{ width: '80%', maxWidth: '800px', height: 'auto' }} />
       </ImageContainer>
       <section id="Main">
         <h2>Welcome!</h2>
         <p>You have reached the website dedicated to the personal portfolio of Benjamin Rodgers.</p>
+      </section>
+        <section id="Dev">
+        <p>This website is a constantly being developed and changing as I do. Feel free to suggest edits or ideas for future updates!</p>
       </section>
     </ContentContainer>
   </MainContainer>
