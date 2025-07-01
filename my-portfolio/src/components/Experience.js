@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Siemens from '../Images/SiemensLogo.jpg';  
 import DKE from '../Images/Psi-Omega-Crest.jpg';  
-import Resume from '../documents/BenRodgersResumeDec2024.pdf'; 
+
 
 
 const ExperienceContainer = styled.div`
@@ -93,12 +93,9 @@ const Experience = () => {
       <MainBlurb>
         <h1>Professional Experiences</h1>
         <p style={{maxWidth: '800px'}}>I have a very versatile professional background. My computer science major is well utilized, but my on-the-job 
-        engineering and business experiences are also put to great use as shown below. If you are interested, please take a minute to view my
-        resume, which is linked below.
+        engineering and business experiences are also put to great use as shown below. 
         </p>
-        <a href={Resume} target="_blank" rel="noopener noreferrer" style={{ fontSize: '1.4em',textDecoration: 'none', color: 'green', fontWeight: 'bold' }}>
-          View My Resume
-        </a>
+
       </MainBlurb>
       <ExperienceSection>
         <LogoContainer>

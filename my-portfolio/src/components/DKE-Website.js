@@ -7,7 +7,7 @@ import PsiOmega from '../Images/Psi-Omega-Crest.jpg';
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align items to the top */
+  align-items: flex-start; 
   padding: 20px;
   background-color: #ffffff;
   min-height: 100vh;
@@ -31,7 +31,7 @@ const BackButton = styled(Link)`
 
 const Content = styled.div`
   display: flex;
-  align-items: flex-start; /* Align items to the top */
+  align-items: flex-start; 
   width: 100%;
 `;
 
