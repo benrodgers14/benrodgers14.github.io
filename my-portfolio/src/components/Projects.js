@@ -19,6 +19,20 @@ const ProjectsContainer = styled.main`
 const Header = styled.header`
   text-align: center;
   margin-bottom: 40px;
+
+  h2 {
+    font-size: 2.2em;
+    @media (max-width: 600px) {
+      font-size: 1.5em;
+    }
+  }
+  p {
+    font-size: 1.3em;
+    @media (max-width: 600px) {
+      font-size: 1em;
+    }
+  }
+
 `;
 
 const ProjectsGrid = styled.div`
@@ -27,29 +41,58 @@ const ProjectsGrid = styled.div`
   gap: 20px;
   width: 100%;
   max-width: 800px;
-`;
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    gap: 16px;
+  }
 
+
+
+`;
+//rgba(31, 115, 44, 0.68)
+// #d4af37
 const ProjectCard = styled.a`
   display: flex;
   flex-direction: column;
   align-items: center;
   text-decoration: none;
   color: inherit;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 4px solid rgba(32, 116, 44, 0.68); 
+  border-radius: 12px;        
+  background: #fff;           
 
   &:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     border-color: #d4af37;  
   }
+
+    @media (max-width: 600px) {
+    border-radius: 8px;
+    font-size: 0.95em;
+  }
+
+
 `;
 
 const ImageContainer = styled.div`
   width: 100%;
-  padding-top: 100%; /* 1:1 Aspect Ratio */
+  padding-top: 100%;
   position: relative;
   background-color: #f0f0f0;
   border-radius: 8px;
   overflow: hidden;
+
+  @media (max-width: 600px) {
+    border-radius: 6px;
+  }
+
 `;
 
 const Image1 = styled.img`
@@ -66,12 +109,15 @@ const Image1 = styled.img`
 
 const Image2 = styled.img`
   position: absolute;
+  object-fit: contain;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-position: 50% 50%; 
-  transform: scale(1); 
+  background: #fff;
+  
+
 `;
 
 const Image3 = styled.img`
@@ -87,6 +133,12 @@ const Image3 = styled.img`
 const Label = styled.p`
   text-align: center;
   margin-top: 10px;
+  
+  @media (max-width: 600px) {
+    font-size: 1.1em;
+    margin-top: 6px;
+  }
+
 `;
 
 const Projects = () => (

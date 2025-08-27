@@ -11,6 +11,11 @@ const Container = styled.div`
   padding: 20px;
   background-color: #ffffff;
   min-height: 100vh;
+
+  @media (max-width: 600px) {
+    padding: 10px;
+    align-items: stretch;
+  }
 `;
 
 const BackButton = styled(Link)`
@@ -31,30 +36,53 @@ const BackButton = styled(Link)`
 
 const Content = styled.div`
   display: flex;
-  align-items: flex-start; /* Align items to the top */
+  align-items: flex-start;
   width: 100%;
+  /* Remove max-width and margin: 0 auto */
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    align-items: stretch;
+  }
 `;
 
 const ImageContainer = styled.div`
-  border-top: 2px solid #e0e0e0; 
   flex: 1;
   display: flex;
-  justify-content: flex-start; /* Align image to the left */
-  align-items: flex-start; /* Align image to the top */
+  justify-content: center;
+  align-items: flex-start;
+  /* Remove border-top and margin-right */
+
+  @media (max-width: 800px) {
+    width: 100%;
+    margin-bottom: 16px;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const Image = styled.img`
   width: 100%;
-  max-width: 400px;
+  max-width: 100%;
   height: auto;
   border-radius: 8px;
-  padding: 20px;
+  padding: 0;
+
+  @media (max-width: 800px) {
+    max-width: 100%;
+    padding: 0;
+  }
 `;
 
 const TextContainer = styled.div`
-  border-top: 2px solid #e0e0e0; 
   flex: 2;
-  padding-left: 20px;
+  padding-left: 32px;
+
+  @media (max-width: 800px) {
+    padding-left: 0;
+    width: 100%;
+    text-align: center;
+  }
 `;
 
 const FitCheck = () => (

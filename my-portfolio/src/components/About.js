@@ -5,29 +5,31 @@ import Wilderness from '../Images/Wilderness.JPG';
 // FAQ Page main container styling
 const AboutContainer = styled.div`
   display: flex;
-  flex-direction: row; 
-  align-items: flex-start; 
-  justify-content: space-between; 
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
   color: #333;
   min-height: 100vh;
   padding: 10px;
-  background-color: #ffffff;
+  background-color: #fff;
 
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     padding: 5px;
   }
 `;
 
 const AboutContent = styled.div`
-  width: 100%;
-  max-width: 800px; 
-  text-align: center; 
+  flex: 2;
+  text-align: center;
+  margin-right: 32px;
+  max-width: 50%; 
 
-  @media (max-width: 600px) {
-    max-width: 95vw;
-    margin: 0 auto;
+  @media (max-width: 800px) {
+    margin-right: 0;
+    margin-bottom: 16px;
+    max-width: 100%;
   }
 `;
 
@@ -79,7 +81,7 @@ const ImageContainer = styled.div`
 
   img {
     width: 100%;
-    max-width: 800px;
+    max-width: 1200px;
     height: auto;
     margin-top: 50px; 
     margin-left: 0;
@@ -98,7 +100,7 @@ const ImageContainer = styled.div`
   }
 `;
 
-// AboutItem component
+
 const AboutItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -120,7 +122,7 @@ const About = () => {
     {
       question: "Education",
       answer: `I have a strong educational background. I graduated from Springside Chestnut Hill Academy in 2022, and now attend Rensselaer
-       Polytechnic Institute as a Computer Science Major. I have recently acquired a minor in Economics with the hopes of Double Majoring. My
+       Polytechnic Institute as a Computer Science and Economics Dual Major with a concentration in Artificial Intelligence and Data. Speaking for the economics degree, I have a strong interest in labor economics. My
        intended graduation date is Spring 2026.`,
     },
     {

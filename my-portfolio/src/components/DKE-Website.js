@@ -3,16 +3,6 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import PsiOmega from '../Images/Psi-Omega-Crest.jpg'; 
 
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; 
-  padding: 20px;
-  background-color: #ffffff;
-  min-height: 100vh;
-`;
-
 const BackButton = styled(Link)`
   align-self: flex-start;
   margin-bottom: 20px;
@@ -29,31 +19,68 @@ const BackButton = styled(Link)`
   }
 `;
 
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 20px;
+  background-color: #ffffff;
+  min-height: 100vh;
+
+  @media (max-width: 800px) {
+    padding: 10px;
+  }
+`;
+
 const Content = styled.div`
   display: flex;
-  align-items: flex-start; 
+  align-items: flex-start;
   width: 100%;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    align-items: stretch;
+  }
 `;
 
 const ImageContainer = styled.div`
-  border-top: 2px solid #e0e0e0; 
   flex: 1;
   display: flex;
-  justify-content: flex-start; /* Align image to the left */
-  align-items: flex-start; /* Align image to the top */
+  justify-content: center;
+  align-items: flex-start;
+
+  @media (max-width: 800px) {
+    width: 100%;
+    margin-bottom: 16px;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const Image = styled.img`
   width: 100%;
-  max-width: 400px;
+  max-width: 800px;
+  max-height: 600px;
   height: auto;
   border-radius: 8px;
-`;
+  padding: 0;
+  object-fit: contain;  
 
+  @media (max-width: 800px) {
+    max-width: 90vw;
+    max-height: 200px;
+  }
+`;
 const TextContainer = styled.div`
-  border-top: 2px solid #e0e0e0; 
   flex: 2;
-  padding-left: 20px;
+  padding-left: 32px;
+
+  @media (max-width: 800px) {
+    padding-left: 0;
+    width: 100%;
+    text-align: center;
+  }
 `;
 
 const DKEWebsite = () => (
