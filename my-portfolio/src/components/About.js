@@ -135,7 +135,7 @@ const About = () => {
     {
       question: "Extracurriculars",
       answer: `I was a heavy participant in extracurriculars in high school, but now in college, my time is more valuable. The only
-      club/organization I am a current participant in is the Delta Kappa Epsilon Psi Omega fraternity in which I am an active brother and current President.`,
+      club/organization I am a current participant in is the Delta Kappa Epsilon Psi Omega fraternity in which I am an active brother and former President.`,
     },
 
     {
