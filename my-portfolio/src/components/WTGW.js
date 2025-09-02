@@ -10,7 +10,7 @@ const BackButton = styled(Link)`
   background-color:rgb(255, 255, 255);
   color: black;
   text-decoration: none;
-  border: 2px solid black;
+  border: 2px solid #3b2e1e;
   border-radius: 2px;
   transition: background-color 0.3s ease;
 
@@ -19,13 +19,12 @@ const BackButton = styled(Link)`
   }
 `;
 
-
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;
   padding: 20px;
-  background-color: #ffffff;
+  background-color: #E6DEB9;
   min-height: 100vh;
 
   @media (max-width: 800px) {
@@ -65,6 +64,7 @@ const Image = styled.img`
   height: auto;
   border-radius: 8px;
   object-fit: cover;
+  border: 4px solid #907A4B; 
 
   @media (max-width: 800px) {
     max-width: 100%;
@@ -83,6 +83,29 @@ const TextContainer = styled.div`
   }
 `;
 
+const TitleWrapper = styled.div`
+  display: block;
+  max-width: 590px;
+  align-items: flex-start;
+  margin-bottom: 0;
+  text-align: left;
+
+  @media (max-width: 800px) {
+    margin: 0 auto;
+    text-align: center;
+  }
+`;
+
+const Accent = styled.div`
+  height: 4px;
+  background: #907A4B;
+  width: fit-content;
+  align-self: flex-start;
+  border-radius: 2px;
+  width: 100%;
+  margin: 12px 0 8px 0;
+`;
+
 const WTGW = () => (
   <Container>
     <BackButton to="/projects">Back to Projects</BackButton>
@@ -91,10 +114,12 @@ const WTGW = () => (
         <Image src={WTGWArch} alt="Arch" />
       </ImageContainer>
       <TextContainer>
-        <h2>When To Go Where - A National Parks Ontology</h2>
+        <TitleWrapper>
+          <h2 style={{ marginBottom: 0 }}>When To Go Where - A National Parks Ontology</h2>
+          <Accent />
+        </TitleWrapper>
         <p>
          A project completed during my time taking the Ontologies course at Rensselaer Polytechnic Institute under Dr. Deborah McGuinness.
-          
         </p>
         <p>
             Choosing the right national park to visit can be challenging due to factors
@@ -108,13 +133,11 @@ const WTGW = () => (
             This tool is intended to make it easier for adventurers to find a park that meets their needs, 
             ultimately enhancing their outdoor experiences.
         </p>
-
         <p>
           This project was executed in a group of 4 students. Each of us worked hard to make this Ontology
           as complete and robust as possible. Key features of this Ontology include a webscraper, ranking systems,
           and high-level conceptual models for each of the United States National Parks.
         </p>
-
         <p>
           If you want to view the open source code for this project, please visit the GitHub repository linked below. Otherwise feel free to visit the 
           actual website at <a href="https://tetherless-world.github.io/ontology-engineering/oe2024/when-to-go-where/" target="_blank" rel="noopener noreferrer">When To Go Where Website</a>.
@@ -124,13 +147,7 @@ const WTGW = () => (
             GitHub Repository
         </a>
         </p>
-
-
-
       </TextContainer>
-
-
-
     </Content>
   </Container>
 );

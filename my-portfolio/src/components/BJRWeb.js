@@ -9,7 +9,7 @@ const BackButton = styled(Link)`
   background-color:rgb(255, 255, 255);
   color: black;
   text-decoration: none;
-  border: 2px solid black;
+  border: 2px solid #3b2e1e;
   border-radius: 2px;
   transition: background-color 0.3s ease;
 
@@ -24,7 +24,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: stretch;
   padding: 20px;
-  background-color: #ffffff;
+  background-color: #E6DEB9;
   min-height: 100vh;
 
   @media (max-width: 800px) {
@@ -63,6 +63,7 @@ const Image = styled.img`
   height: auto;
   border-radius: 8px;
   padding: 0;
+  border: 4px solid #907A4B;
 
   @media (max-width: 800px) {
     max-width: 100%;
@@ -80,6 +81,20 @@ const TextContainer = styled.div`
     text-align: center;
   }
 `;
+const Accent = styled.div`
+  height: 4px;
+  background: #907A4B;
+  border-radius: 2px;
+  width: 100%;
+  margin: 12px 0 8px 0;
+`;
+
+
+const TitleWrapper = styled.div`
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 0;
+`;
 
 const BJRWeb = () => (
   <Container>
@@ -89,7 +104,10 @@ const BJRWeb = () => (
         <Image src={"/BJRLogo.png"} alt="Arch" />
       </ImageContainer>
       <TextContainer>
-        <h2>Website of Benjamin Rodgers</h2>
+        <TitleWrapper>
+            <h2 style={{ marginBottom: 0 }}>Website of Benjamin Rodgers</h2>
+            <Accent />
+          </TitleWrapper>
         <p>
            Welcome! This project is what you are currently viewing. It is a React application that serves as
  a portfolio for me. This is meant to showcase my projects, interests, and skills. Thanks for visiting!

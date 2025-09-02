@@ -12,7 +12,7 @@ const ProjectsContainer = styled.main`
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background-color: #ffffff;
+  background-color: #E6DEB9; //Can switch back to white
   min-height: 100vh;
 `;
 
@@ -22,6 +22,8 @@ const Header = styled.header`
 
   h2 {
     font-size: 2.2em;
+    margin-bottom: 10px;
+
     @media (max-width: 600px) {
       font-size: 1.5em;
     }
@@ -40,7 +42,8 @@ const ProjectsGrid = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
+  
   @media (max-width: 900px) {
     grid-template-columns: repeat(2, 1fr);
     max-width: 600px;
@@ -70,7 +73,7 @@ const ProjectCard = styled.a`
   &:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-     border-color: #d4bf88;  
+     border-color: #907A4B;  
   }
 
     @media (max-width: 600px) {
@@ -141,18 +144,35 @@ const Label = styled.p`
 
 `;
 
+const Accent = styled.div`
+  width: 150px;
+  height: 4px;
+  background: #907A4B;
+  margin: 0 auto 32px auto;
+  border-radius: 2px;
+  @media (max-width: 600px) {
+    width: 100px;
+    margin: 0 auto 20px auto;
+  }
+`;
+
+
+
 const Projects = () => (
   <ProjectsContainer>
     <Header>
       <h2 style={{ color: '#3b2e1e' }}>Projects</h2>
+      <Accent />
       <p style={{ color: '#3b2e1e' }}>A glimpse into some of the projects I've worked on. Click on each image to learn more about the project.</p>
     </Header>
+    
     <ProjectsGrid>
       <ProjectCard as={Link} to="/Tic-Tac-Toe">
         <ImageContainer>
           <Image1 src={Joe} alt="Project 1" />
         </ImageContainer>
         <Label>Tic-Tac-Toe Machine Learning</Label>
+
       </ProjectCard>
       <ProjectCard as={Link} to="/DKE-Website">
         <ImageContainer>

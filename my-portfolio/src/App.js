@@ -6,9 +6,12 @@ import { createGlobalStyle } from 'styled-components';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Main from './components/Main';
-import About from './components/About';
-import Projects from './components/Projects';
+// import Main from './components/Main';
+import Main2 from './components/Main2';
+// import About from './components/About';
+import About2 from './components/About2';
+// import Projects from './components/Projects';
+import Projects2 from './components/Projects2';
 import Contact from './components/Contact';
 import Experience from './components/Experience';
 import TicTacToe from './components/Tic-Tac-Toe';
@@ -47,9 +50,9 @@ function App() {
                     <Header />
                     <Content>
                         <Routes>
-                            <Route path="/" element={<Main />} />
-                            <Route path="/about" element={<About />} />
-                            <Route path="/projects" element={<Projects />} />
+                            <Route path="/" element={<Main2 />} />
+                            <Route path="/about" element={<About2 />} />
+                            <Route path="/projects" element={<Projects2 />} />
                             <Route path="/contact" element={<Contact />} />
                             <Route path="/experience" element={<Experience />} />
                             <Route path="/Tic-Tac-Toe" element={<TicTacToe />} />

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FooterContainer = styled.footer`
-  background-color: rgba(31, 115, 44, 0.68); 
+  background-color: #907A4B; 
   padding: 1rem;
   text-align: center;
   color: white;
@@ -10,8 +10,8 @@ const FooterContainer = styled.footer`
   bottom: 0;
   width: 100%;
   background: linear-gradient(
-   rgba(212, 175, 55, 0.18) 5%,
-    rgba(31, 115, 44, 0.7) 18%
+   #3B2E1E 5%,
+    #907A4B  18%
    
   ); 
     @media (max-width: 600px) {

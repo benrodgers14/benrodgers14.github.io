@@ -1,15 +1,14 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import FitCheckLogo from '../Images/FitCheckLogo.jpg'; 
 
-
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align items to the top */
+  align-items: flex-start;
   padding: 20px;
-  background-color: #ffffff;
+  background-color: #E6DEB9;
   min-height: 100vh;
 
   @media (max-width: 600px) {
@@ -25,7 +24,7 @@ const BackButton = styled(Link)`
   background-color:rgb(255, 255, 255);
   color: black;
   text-decoration: none;
-  border: 2px solid black;
+  border: 2px solid #3b2e1e;
   border-radius: 2px;
   transition: background-color 0.3s ease;
 
@@ -38,7 +37,6 @@ const Content = styled.div`
   display: flex;
   align-items: flex-start;
   width: 100%;
-  /* Remove max-width and margin: 0 auto */
 
   @media (max-width: 800px) {
     flex-direction: column;
@@ -51,7 +49,6 @@ const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  /* Remove border-top and margin-right */
 
   @media (max-width: 800px) {
     width: 100%;
@@ -67,6 +64,7 @@ const Image = styled.img`
   height: auto;
   border-radius: 8px;
   padding: 0;
+  border: 4px solid #907A4B; 
 
   @media (max-width: 800px) {
     max-width: 100%;
@@ -85,33 +83,58 @@ const TextContainer = styled.div`
   }
 `;
 
-const FitCheck = () => (
-  <Container>
-    <BackButton to="/projects">Back to Projects</BackButton>
-    <Content>
-      <ImageContainer>
-        <Image src={FitCheckLogo} alt="Arch" />
-      </ImageContainer>
-      <TextContainer>
-        <h2>FitCheck</h2>
-        <p>
-          This was a project worked on during the Spring of 2025 by a team of four students from my Institute. This project was designed to be
-          an application that would allow users to generate outfits based on their style preferences. In essence, it is an online closet that
-          provides outfit suggestions. Key features included an outfit generator, a closet management system, and user management features. This project
-          took a lot of time and effort to complete, but it was a great learning experience.       
-        </p>
+const TitleWrapper = styled.div`
+  display: block;
+  max-width: 112px;
+  margin-bottom: 0;
+  text-align: left;
 
-        <p>
-        </p>
+  @media (max-width: 800px) {
+    margin: 0 auto;
+    text-align: center;
+  }
+`;
 
+const Accent = styled.div`
+  height: 4px;
+  background: #907A4B;
+  border-radius: 2px;
+  width: 100%;
+  margin: 12px 0 8px 0; 
+`;
 
+const FitCheck = () => {
+  const titleRef = useRef(null);
+  const [accentWidth, setAccentWidth] = useState('100%');
 
-      </TextContainer>
+  useEffect(() => {
+    if (titleRef.current) {
+      setAccentWidth(titleRef.current.offsetWidth);
+    }
+  }, []);
 
-
-
-    </Content>
-  </Container>
-);
+  return (
+    <Container>
+      <BackButton to="/projects">Back to Projects</BackButton>
+      <Content>
+        <ImageContainer>
+          <Image src={FitCheckLogo} alt="FitCheck Logo" />
+        </ImageContainer>
+        <TextContainer>
+          <TitleWrapper>
+            <h2 ref={titleRef} style={{ marginBottom: 0 }}>FitCheck</h2>
+            <Accent style={{ width: accentWidth }} />
+          </TitleWrapper>
+          <p>
+            This was a project worked on during the Spring of 2025 by a team of four students from my Institute. This project was designed to be
+            an application that would allow users to generate outfits based on their style preferences. In essence, it is an online closet that
+            provides outfit suggestions. Key features included an outfit generator, a closet management system, and user management features. This project
+            took a lot of time and effort to complete, but it was a great learning experience.       
+          </p>
+        </TextContainer>
+      </Content>
+    </Container>
+  );
+};
 
 export default FitCheck;

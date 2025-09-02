@@ -11,7 +11,7 @@ const BackButton = styled(Link)`
   background-color:rgb(255, 255, 255);
   color: black;
   text-decoration: none;
-  border: 2px solid black;
+  border: 2px solid #3b2e1e;
   border-radius: 2px;
   transition: background-color 0.3s ease;
 
@@ -20,13 +20,12 @@ const BackButton = styled(Link)`
   }
 `;
 
-
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;
   padding: 20px;
-  background-color: #ffffff;
+  background-color: #E6DEB9;
   min-height: 100vh;
 
   @media (max-width: 800px) {
@@ -65,6 +64,7 @@ const Image = styled.img`
   height: auto;
   border-radius: 8px;
   object-fit: contain;
+  border: 4px solid #907A4B; 
 
   @media (max-width: 800px) {
     max-width: 100%;
@@ -81,6 +81,27 @@ const TextContainer = styled.div`
     text-align: center;
   }
 `;
+
+const TitleWrapper = styled.div`
+  display: block;
+  max-width: 420px;
+  margin-bottom: 0;
+  text-align: left;
+
+  @media (max-width: 800px) {
+    margin: 0 auto;
+    text-align: center;
+  }
+`;
+
+const Accent = styled.div`
+  height: 4px;
+  background: #907A4B;
+  border-radius: 2px;
+  width: 100%;
+  margin: 12px 0 8px 0; // Reduced bottom margin
+`;
+
 const TicTacToe = () => (
   <Container>
     <BackButton to="/projects">Back to Projects</BackButton>
@@ -89,40 +110,29 @@ const TicTacToe = () => (
         <Image src={TicTacToeImage} alt="Tic Tac Toe" />
       </ImageContainer>
       <TextContainer>
-        <h2>Tic Tac Toe Machine Learning</h2>
+        <TitleWrapper>
+          <h2 style={{ marginBottom: 0 }}>Tic Tac Toe Machine Learning</h2>
+          <Accent />
+        </TitleWrapper>
         <p>
          A project worked on and executed by Theodore Tasman of Penn State University and I.
-          
         </p>
         <p>
           Taking inspiration from the 1983 classic, WarGames, we decided to see if we could replicate the Tic-Tac-Toe learning machine using our knowledge and research. This project required hours of research and lots of trial and error, as we had not worked on or learned machine learning before.
-
           While Tic-Tac-Toe represents a straightforward application due to its solved nature, our primary objective was to implement a deep-learning model as a learning exercise and a proof of concept for future, more intricate challenges.
-
         </p>
-
         <p>
           This project was a great learning experience. To view the project in further detail, please visit the GitHub repository linked below along with the attached PDF Report.
-        
-
         </p>
-
         <a href={TicTacToeReport} target="_blank" rel="noopener noreferrer">
           Tic-Tac-Toe PDF Report
         </a>
-
         <p>
         <a href="https://github.com/tedtasman/tic-tac-joe" target="_blank" rel="noopener noreferrer">
             GitHub Repository
         </a>
         </p>
-
-
-
       </TextContainer>
-
-
-
     </Content>
   </Container>
 );

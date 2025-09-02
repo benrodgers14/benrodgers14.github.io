@@ -4,7 +4,8 @@ import  { useState } from 'react';
 import styled from 'styled-components';
 
 const HeaderContainer = styled.header`
-  background-color: rgba(31, 115, 44, 0.68); 
+  width: 100;
+  background-color: #907A4B; 
   padding: 0px 20px;
   display: flex;
   align-items: center;
@@ -13,11 +14,11 @@ const HeaderContainer = styled.header`
   flex-wrap: wrap;
   backdrop-filter: blur(12px);
   background: linear-gradient(
-    rgba(31, 115, 44, 0.7) 88%,
-    rgba(212, 175, 55, 0.18) 100%
+    #907A4B 88%,
+    #3B2E1E 100%
   );
   @media (max-width: 600px) {
-    
+    height: 60px;    
     align-items: center;
     padding: 8px;
   }
@@ -32,9 +33,7 @@ const LogoContainer = styled.div`
     height: 60px;
     margin: 0 8px;
     @media (max-width: 600px) {
-      width: 40px;
-      height: 40px;
-      margin: 0 4px;
+      display: none;
     }
   }
 
@@ -73,7 +72,7 @@ const Nav = styled.nav`
     align-items: flex-start;
     margin-top: 0;
     display: flex;
-    background: rgb(212, 175, 55);
+    background: #3b2e1e;
     position: absolute;
     top: 100%;
     right: 0; 
@@ -123,7 +122,7 @@ const NavItem = styled.div`
   align-items: center;
 
   &:hover {
-    color: rgba(212, 175, 55, 0.52);
+    color: #54320f;
   }
 
   @media (max-width: 600px) {
@@ -138,7 +137,7 @@ const NavLinkStyled = styled(Link)`
   position: relative;
 
   &:hover {
-    color: #d4af37;
+    color: #E6DEB9;
   }
 
   &::after {
@@ -146,7 +145,7 @@ const NavLinkStyled = styled(Link)`
     display: block;
     width: 0;
     height: 2px;
-    background: #d4af37;
+    background: #3B2E1E;
     transition: width 0.3s;
     position: absolute;
     left: 0;
@@ -215,7 +214,7 @@ const Header = () => {
         <img src="/BJRLogo.png" alt="Logo" style={{ width: '80px', height: '80px', marginLeft: '10px', marginRight: '10px' }} />
         
         <Link to="/" style={{ textDecoration: 'none' }}>
-          <h1 style={{ color: 'white', fontSize: '3em', margin: '0 20px' }}>BJR</h1> {/* Increase font size */}
+          <h1 style={{ color: '#3B2E1E', fontSize: '3em', margin: '0 20px' }}>BJR</h1> {/* Increase font size */}
         </Link>
 
       </LogoContainer>
