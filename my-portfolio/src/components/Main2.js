@@ -217,7 +217,7 @@ const Main = () => (
       <HeroText>
         <h2>Welcome!</h2>
         <p>
-          <span className="name">I'm Benjamin Rodgers,</span>a business owner hardworking computer science and economics student at Rensselaer Polytechnic Institute.
+          <span className="name">I'm Benjamin Rodgers,</span>a hardworking computer science and economics student at Rensselaer Polytechnic Institute.
         </p>
       </HeroText>
     </HeroSection>
