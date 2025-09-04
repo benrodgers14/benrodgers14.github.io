@@ -66,48 +66,74 @@ const Nav = styled.nav`
   align-items: center;
 
   @media (max-width: 600px) {
-    flex-direction: column;
-    width:100vw;
-    max-width: 300px;
-    align-items: flex-start;
-    margin-top: 0;
-    display: flex;
-    background: #3b2e1e;
     position: absolute;
     top: 100%;
-    right: 0; 
-   
-    height: auto; 
-    padding: 20px 20px 20px 20px;
-    box-shadow: -2px 0 8px rgba(0,0,0,0.15); 
-    transform: translateX(${props => (props.open ? '0' : '100%')});
-    transition: transform 0.3s ease;
+    left: 0;
+    right: 0;
+
+    background: #3b2e1e;
+    padding: 14px 20px;
+
+    transform-origin: top;
+    transform: scaleY(${props => (props.open ? 1 : 0)});
+    opacity: ${props => (props.open ? 1 : 0)};
+    transition: transform 220ms ease, opacity 200ms ease;
+    pointer-events: ${props => (props.open ? 'auto' : 'none')};
+
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
     z-index: 1200;
-    display: ${props => (props.open ? 'flex' : 'none')};
+
+    > div {
+      transform: translateY(${props => (props.open ? '0' : '-6px')});
+      opacity: ${props => (props.open ? 1 : 0)};
+      transition: transform 240ms ease, opacity 240ms ease;
+    }
+    > div:nth-child(1) { transition-delay: ${props => (props.open ? '60ms' : '0ms')}; }
+    > div:nth-child(2) { transition-delay: ${props => (props.open ? '120ms' : '0ms')}; }
+    > div:nth-child(3) { transition-delay: ${props => (props.open ? '180ms' : '0ms')}; }
   }
 `;
 
 
-const Hamburger = styled.div`
+const Hamburger = styled.button`
   display: none;
-  flex-direction: column;
-  cursor: pointer;
+  background: transparent;
+  border: 0;
+  padding: 10px;              
   margin-left: auto;
   margin-right: 10px;
   z-index: 1100;
   position: relative;
-  span {
-    height: 4px;
-    width: 30px;
-    background: white;
-    margin: 5px 0;
-    border-radius: 2px;
-    transition: 0.3s;
-  }
+  cursor: pointer;
 
   @media (max-width: 600px) {
-    display: flex;
-    
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  span {
+    width: 28px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    display: block;
+    position: relative;
+    transition: transform .3s ease, opacity .2s ease;
+  }
+  span + span { margin-top: 6px; }
+
+  &[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  &[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+  }
+  &[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
   }
 `;
 
@@ -156,55 +182,6 @@ const NavLinkStyled = styled(Link)`
     width: 100%;
   }
 `;
-// const HeaderContainer = styled.header`
-//   background-color:rgba(31, 115, 44, 0.68); 
-//   padding: 0px 20px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   z-index: 1000;
-// `;
-
-
-// const LogoContainer = styled.div`
-//   display: flex;
-//   align-items: center;
-// `;
-
-// const Nav = styled.nav`
-//   display: flex;
-//   align-items: center;
-// `;
-
-// const NavItem = styled.div`
-//   position: relative;
-//   margin: 0 15px;
-//   left: 10px;
-//   color: white;
-//   font-size: 1.8em;
-//   cursor: pointer;
-
-//   &:hover {
-//     color:rgba(212, 175, 55, 0.52); 
-//   }
-
-//   /* Show dropdown on hover */
-//   &:hover > ul {
-//     display: block;
-//   }
-
-//   display: flex;
-//   align-items: center; /* Center text and caret vertically */
-// `;
-
-// const NavLinkStyled = styled(Link)`
-//   color: white;
-//   text-decoration: none;
-
-//   &:hover {
-//     color: #d4af37; /* Optional: change color on hover */
-//   }
-// `;
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -218,8 +195,11 @@ const Header = () => {
         </Link>
 
       </LogoContainer>
-      {/* Navigation Links */}
-      <Hamburger onClick={() => setMenuOpen(!menuOpen)}>
+      <Hamburger
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle navigation"
+        aria-expanded={menuOpen}
+      >
         <span />
         <span />
         <span />

@@ -84,7 +84,7 @@ const TextContainer = styled.div`
 
 const TitleWrapper = styled.div`
   display: block;
-  max-width: 420px;
+  max-width: 370px;
   margin-bottom: 0;
   text-align: left;
 
@@ -97,9 +97,11 @@ const TitleWrapper = styled.div`
 const Accent = styled.div`
   height: 4px;
   background: #907A4B;
+  width: fit-content;
+  align-self: flex-start;
   border-radius: 2px;
   width: 100%;
-  margin: 12px 0 8px 0; // Reduced bottom margin
+  margin: 12px 0 8px 0;
 `;
 
 const TicTacToe = () => (

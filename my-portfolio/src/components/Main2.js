@@ -134,21 +134,25 @@ const SectionsRow = styled.div`
   width: 90vw;
   max-width: 1400px;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1200px) {
     gap: 24px;
     width: 98vw;
-    max-width: 75vw;
-    max-height: 75%;
+    max-width: 900px;
+  }
+  @media (max-width: 900px) {
+    gap: 16px;
+    width: 98vw;
+    max-width: 700px;
   }
   @media (max-width: 800px) {
     flex-direction: column;
     gap: 20px;
     align-items: center;
     width: 100vw;
+    max-width: 100vw;
   }
     
 
-  }
 `;
 
 const SectionCard = styled.div`
@@ -160,7 +164,20 @@ const SectionCard = styled.div`
   text-align: center;
   min-width: 0;
   justify-content: flex-start; 
-  
+
+  @media (max-width: 1200px) {
+    padding: 40px 18px;
+  }
+  @media (max-width: 900px) {
+    padding: 28px 10px;
+  }
+  @media (max-width: 800px) {
+    width: 96vw;
+    max-width: 300px;
+    margin: 0 auto;
+    margin-top: 0px;
+    padding: 20px 8px;
+  }
   h4 {
     font-size: 1.8em;
     color: #3B2E1E;
@@ -188,10 +205,10 @@ const BottomImageContainer = styled.div`
     max-width: 100vw;
   }
   @media (max-width: 800px) {
-    width: 100vw;
-    padding-bottom: 32px;
+    width: auto;
+    height: auto;
+    padding: 0 12px 16px 12px;
   }
-
   img {
     width: 100%;
     height: auto;
