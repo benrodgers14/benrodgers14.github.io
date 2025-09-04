@@ -170,6 +170,15 @@ const ArrowButton = styled.button`
   @media (max-width: 1300px) {
     display: none;
   }
+
+  @media (max-width: 600px) {
+  
+    position: static !important;
+    width: 44px !important;
+    height: 44px !important;
+    font-size: 2em !important;
+    margin: 0 8px;
+  }
 `;
 
 const ArrowLeft = styled(ArrowButton)`
